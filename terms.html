@@ -1,3 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMS Terms – Pakt</title>
+  <style>
+    :root {
+      --bg: #080808;
+      --card: #111111;
+      --border: #1e1e1e;
+      --cyan: #00E0C6;
+      --text: #ffffff;
+      --muted: #888888;
+      --body-font: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body-font);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 28px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-rings {
+      width: 32px;
+      height: 32px;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .logo-rings::before,
+    .logo-rings::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      border: 2.5px solid var(--cyan);
+      width: 22px;
+      height: 22px;
+      top: 5px;
+    }
+
+    .logo-rings::before { left: 0; }
+    .logo-rings::after  { left: 10px; }
+
+    header h1 {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+    }
+
+    header h1 span {
+      color: var(--cyan);
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .hero-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 12px;
+    }
+
+    h2.page-title {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .effective-date {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    .intro {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--cyan);
+      border-radius: 8px;
+      padding: 20px 24px;
+      font-size: 15px;
+      color: #cccccc;
+      margin-bottom: 48px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    p {
+      color: #cccccc;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
     ul {
       list-style: none;
       padding: 0;
@@ -21,6 +149,26 @@
       position: absolute;
       left: 0;
       color: var(--cyan);
+    }
+
+    .highlight-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+    }
+
+    .highlight-box p {
+      margin-bottom: 8px;
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight-box strong {
+      color: var(--text);
     }
 
     a {
@@ -69,220 +217,129 @@
 
   <main>
     <div class="hero-label">Legal</div>
-    <h2 class="page-title">Terms &amp; Conditions</h2>
+    <h2 class="page-title">SMS Terms &amp; Conditions</h2>
     <p class="effective-date">Effective date: March 14, 2026 &nbsp;·&nbsp; Last updated: March 14, 2026</p>
 
     <div class="intro">
-      Please read these Terms carefully before using Pakt. By creating an account or using the app, you agree to be bound by these Terms. If you do not agree, do not use Pakt.
+      These SMS Terms apply to the accountability partner text message feature in the Pakt app. By using this feature, you agree to the terms below.
     </div>
 
-    <!-- 1 -->
+    <!-- Program description -->
     <section>
-      <h3>1. About Pakt</h3>
+      <h3>Program Description</h3>
       <p>
-        Pakt is a social accountability iOS application that allows users to commit to avoiding specific apps for a chosen period of time, alone or with friends. The Service uses Apple's Screen Time framework to detect when a restricted app is opened and notifies group members when a commitment is broken.
+        Pakt's accountability partner feature allows users to designate one or more phone numbers to receive SMS text message alerts when a pakt is broken. These messages are sent on behalf of the Pakt user who created the pakt and added the recipient's number.
       </p>
       <p>
-        These Terms of Service ("Terms") govern your use of the Pakt app and any related services (collectively, the "Service"). By accessing or using the Service, you confirm that you are at least 13 years old and agree to these Terms.
+        SMS messages are sent by Pakt and are triggered solely by pakt activity — specifically, when a user opens a restricted app during an active pakt period.
       </p>
     </section>
 
     <hr class="divider" />
 
-    <!-- 2 -->
+    <!-- Message frequency -->
     <section>
-      <h3>2. Accounts</h3>
+      <h3>Message Frequency</h3>
       <p>
-        To use Pakt you must create an account with a valid email address, a display name, and a unique username. You are responsible for keeping your login credentials confidential and for all activity that occurs under your account.
+        Accountability partners may receive up to <strong>3 SMS messages per day</strong>. Message volume varies based on pakt activity. Messages are only sent when a pakt is broken — no promotional or marketing messages are sent.
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Consent -->
+    <section>
+      <h3>Consent</h3>
+      <p>
+        The Pakt app user who adds an accountability partner's phone number confirms, at the time of entry, that:
       </p>
       <ul>
-        <li>You must provide accurate and current account information.</li>
-        <li>You may not impersonate another person or use a username that is offensive or misleading.</li>
-        <li>You must notify us immediately at <a href="mailto:support@pakt.app">support@pakt.app</a> if you suspect unauthorized access to your account.</li>
-        <li>You may only hold one account. Duplicate accounts may be removed.</li>
+        <li>They have obtained the explicit prior consent of the recipient to receive SMS messages from Pakt.</li>
+        <li>The recipient is aware of the nature and frequency of the messages they may receive.</li>
+        <li>They are authorized to provide the recipient's phone number for this purpose.</li>
       </ul>
+      <p>
+        Pakt does not independently verify consent with the recipient. Full responsibility for obtaining consent rests with the Pakt user adding the phone number.
+      </p>
     </section>
 
     <hr class="divider" />
 
-    <!-- 3 -->
+    <!-- Opt-out -->
     <section>
-      <h3>3. Subscriptions &amp; Payments</h3>
+      <h3>How to Opt Out</h3>
       <p>
-        Certain features of Pakt require a paid subscription ("Pakt Pro"). Subscriptions are offered on a monthly or annual basis and are managed through Apple's App Store using StoreKit.
+        Recipients can stop receiving SMS messages at any time using either of the following methods:
       </p>
       <ul>
-        <li>Prices are displayed in your local currency at the time of purchase.</li>
-        <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing period.</li>
-        <li>You can manage and cancel your subscription in iOS Settings → Apple ID → Subscriptions.</li>
-        <li>All purchases are final. Refunds are handled by Apple in accordance with their refund policy.</li>
-        <li>A free trial, if offered, converts automatically to a paid subscription unless cancelled before the trial ends.</li>
+        <li>Reply <strong>STOP</strong> to any SMS message received from Pakt. No further messages will be sent to that number.</li>
+        <li>Ask the Pakt user who added their number to remove it from the app.</li>
       </ul>
       <p>
-        We reserve the right to change subscription pricing with reasonable advance notice. Continued use after a price change constitutes acceptance of the new price.
+        After opting out via STOP, if you wish to re-enable messages, reply <strong>START</strong> to the same number.
+      </p>
+      <p>
+        For help, reply <strong>HELP</strong> to any message or contact us at <a href="mailto:support@pakt.app">support@pakt.app</a>.
       </p>
     </section>
 
     <hr class="divider" />
 
-    <!-- 4 -->
+    <!-- Rates -->
     <section>
-      <h3>4. Acceptable Use</h3>
-      <p>You agree to use Pakt only for lawful purposes and in a manner consistent with these Terms. You must not:</p>
-      <ul>
-        <li>Use the Service to harass, threaten, or harm other users.</li>
-        <li>Create pakts or usernames that are offensive, discriminatory, or abusive.</li>
-        <li>Attempt to circumvent Screen Time enforcement or game the reputation system.</li>
-        <li>Use automated tools, bots, or scripts to interact with the Service.</li>
-        <li>Attempt to access or tamper with another user's account or data.</li>
-        <li>Reverse-engineer, decompile, or otherwise attempt to extract the source code of the app.</li>
-        <li>Use the Service in any way that could damage, overload, or impair our infrastructure.</li>
-      </ul>
+      <h3>Message &amp; Data Rates</h3>
+      <div class="highlight-box">
+        <p><strong>Message and data rates may apply.</strong></p>
+        <p>Charges depend on your mobile carrier plan. Pakt is not responsible for any fees charged by your carrier for receiving SMS messages.</p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Supported carriers -->
+    <section>
+      <h3>Supported Carriers</h3>
       <p>
-        We reserve the right to suspend or terminate accounts that violate these rules, at our sole discretion.
+        SMS delivery is supported for most major US carriers including AT&amp;T, T-Mobile, Verizon, Sprint, Boost Mobile, Cricket, Metro PCS, and others. Carrier support may vary. Pakt is not liable for messages not delivered due to carrier limitations.
       </p>
     </section>
 
     <hr class="divider" />
 
-    <!-- 5 -->
+    <!-- Misuse -->
     <section>
-      <h3>5. Screen Time &amp; Family Controls</h3>
+      <h3>Misuse &amp; Enforcement</h3>
       <p>
-        Pakt uses Apple's Family Controls entitlement to apply app restrictions on your device. By granting this permission you understand and agree that:
-      </p>
-      <ul>
-        <li>App blocking is enforced locally by Apple's Screen Time system, not by Pakt directly.</li>
-        <li>Pakt cannot guarantee that restrictions are impossible to circumvent (e.g., device wipe, parental controls removal).</li>
-        <li>When a restricted app is opened, the system extension will record a "pakt broken" event and transmit it to our servers.</li>
-        <li>This event is visible to other members of your group pakt on the social feed.</li>
-        <li>You grant permission for this event to be posted on your behalf by using the feature.</li>
-      </ul>
-      <p>
-        You can revoke Family Controls permission at any time in iOS Settings → Screen Time. Revoking permission while a pakt is active may result in the pakt being recorded as broken.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 6 -->
-    <section>
-      <h3>6. User Content &amp; Public Feed</h3>
-      <p>
-        When you create a public pakt or post a check-in, your username and activity are displayed on the public social feed visible to all Pakt users. By using these features you grant us a non-exclusive, royalty-free license to display that content within the Service.
+        We reserve the right to suspend or permanently disable SMS access for any account that:
       </p>
       <ul>
-        <li>You retain ownership of any content you create.</li>
-        <li>You can create private pakts at any time — these are never shown on the public feed.</li>
-        <li>You are solely responsible for the content you make public.</li>
-        <li>We may remove any content that violates these Terms or that we deem harmful to the community.</li>
+        <li>Adds phone numbers without the recipient's consent.</li>
+        <li>Receives opt-out complaints or carrier spam reports.</li>
+        <li>Uses the feature to harass or send unwanted messages to recipients.</li>
       </ul>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 7 -->
-    <section>
-      <h3>7. Reputation System</h3>
       <p>
-        Pakt operates a reputation score that increases with daily check-ins and decreases when a pakt is broken. This system is intended to encourage accountability and is a core feature of the Service.
-      </p>
-      <p>
-        Reputation scores are computed automatically based on your activity. We do not guarantee the accuracy of scores at all times, and scores may be adjusted as we fix bugs or improve the system. We are not liable for any consequences you believe result from your reputation score.
+        Misuse of the SMS feature may also result in account termination under our <a href="./terms.html">Terms &amp; Conditions</a>.
       </p>
     </section>
 
     <hr class="divider" />
 
-    <!-- 8 -->
+    <!-- Contact -->
     <section>
-      <h3>8. Intellectual Property</h3>
+      <h3>Contact Us</h3>
       <p>
-        All content, design, code, logos, and trademarks in the Pakt app are owned by us or our licensors and are protected by applicable intellectual property laws. You may not copy, reproduce, distribute, or create derivative works from any part of the Service without our express written permission.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 9 -->
-    <section>
-      <h3>9. Disclaimers</h3>
-      <p>
-        The Service is provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.
-      </p>
-      <ul>
-        <li>We do not warrant that the Service will be uninterrupted, error-free, or free of viruses.</li>
-        <li>We do not guarantee that app blocking will be effective in all circumstances.</li>
-        <li>Pakt is a productivity tool, not a medical or therapeutic service. We make no claims about its effectiveness in reducing screen time or changing behavior.</li>
-      </ul>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 10 -->
-    <section>
-      <h3>10. Limitation of Liability</h3>
-      <p>
-        To the maximum extent permitted by applicable law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the Service, even if we have been advised of the possibility of such damages.
-      </p>
-      <p>
-        Our total liability to you for any claim arising out of or relating to these Terms or the Service shall not exceed the amount you paid us in the twelve months preceding the claim, or $10 USD, whichever is greater.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 11 -->
-    <section>
-      <h3>11. Termination</h3>
-      <p>
-        You may delete your account at any time from Profile settings. Account deletion is permanent and removes all your personal data from our systems.
-      </p>
-      <p>
-        We may suspend or terminate your account at any time for violation of these Terms, with or without notice. Upon termination, your right to use the Service ceases immediately. Provisions of these Terms that by their nature should survive termination will survive, including sections on intellectual property, disclaimers, and limitation of liability.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 12 -->
-    <section>
-      <h3>12. Governing Law</h3>
-      <p>
-        These Terms are governed by the laws of the State of California, United States, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts located in California.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 13 -->
-    <section>
-      <h3>13. Changes to These Terms</h3>
-      <p>
-        We may update these Terms from time to time. When we do, we will revise the "Last updated" date at the top of this page. For significant changes, we will notify you via an in-app message or email. Continued use of Pakt after updated Terms are posted constitutes your acceptance of the changes.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 14 -->
-    <section>
-      <h3>14. Contact Us</h3>
-      <p>
-        If you have questions about these Terms, contact us at:
+        For questions about these SMS Terms or to report an issue, contact us at:
       </p>
       <ul>
         <li>Email: <a href="mailto:support@pakt.app">support@pakt.app</a></li>
       </ul>
-      <p>
-        For privacy-related inquiries, see our <a href="./privacy-policy.html">Privacy Policy</a>.
-      </p>
     </section>
   </main>
 
   <footer>
     &copy; 2026 Pakt &nbsp;·&nbsp;
     <a href="./privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="./terms.html">Terms &amp; Conditions</a> &nbsp;·&nbsp;
     <a href="mailto:support@pakt.app">Contact</a>
   </footer>
 
