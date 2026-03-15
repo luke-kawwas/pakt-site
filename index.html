@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Pakt</title>
+  <style>
+    :root {
+      --bg: #080808;
+      --card: #111111;
+      --border: #1e1e1e;
+      --cyan: #00E0C6;
+      --text: #ffffff;
+      --muted: #888888;
+      --body-font: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body-font);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 28px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-rings {
+      width: 32px;
+      height: 32px;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .logo-rings::before,
+    .logo-rings::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      border: 2.5px solid var(--cyan);
+      width: 22px;
+      height: 22px;
+      top: 5px;
+    }
+
+    .logo-rings::before { left: 0; }
+    .logo-rings::after  { left: 10px; }
+
+    header h1 {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+    }
+
+    header h1 span {
+      color: var(--cyan);
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .hero-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 12px;
+    }
+
+    h2.page-title {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .effective-date {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    .intro {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--cyan);
+      border-radius: 8px;
+      padding: 20px 24px;
+      font-size: 15px;
+      color: #cccccc;
+      margin-bottom: 48px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    p {
+      color: #cccccc;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 12px;
+    }
+
+    ul li {
+      color: #cccccc;
+      font-size: 15px;
+      padding: 6px 0 6px 20px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    ul li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+    }
+
+    a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--muted);
+    }
+
+    footer a:hover {
+      color: var(--cyan);
+    }
+
+    @media (max-width: 600px) {
+      h2.page-title { font-size: 28px; }
+      main { padding: 40px 16px 64px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-rings" aria-hidden="true"></div>
+    <h1>Pakt<span>.</span></h1>
+  </header>
+
+  <main>
+    <div class="hero-label">Legal</div>
+    <h2 class="page-title">Privacy Policy</h2>
+    <p class="effective-date">Effective date: March 14, 2026 &nbsp;·&nbsp; Last updated: March 14, 2026</p>
+
+    <div class="intro">
+      Pakt is built on a simple belief: your data belongs to you. We collect the minimum information required to run the app, keep everything as private as possible, and never sell your data.
+    </div>
+
+    <!-- 1 -->
+    <section>
+      <h3>1. Who We Are</h3>
+      <p>
+        Pakt ("we", "our", or "us") is a social accountability iOS app that helps you commit to avoiding distracting apps — alone or with friends. This Privacy Policy explains what information we collect, how we use it, and what choices you have.
+      </p>
+      <p>
+        If you have questions, contact us at <a href="mailto:privacy@pakt.app">privacy@pakt.app</a>.
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 2 -->
+    <section>
+      <h3>2. Information We Collect</h3>
+
+      <p><strong>Account information</strong></p>
+      <p>When you create an account we collect:</p>
+      <ul>
+        <li>Email address (used for authentication only)</li>
+        <li>Display name and username (shown to other users)</li>
+      </ul>
+
+      <p><strong>Pakt activity</strong></p>
+      <p>To power the social feed and accountability features we store:</p>
+      <ul>
+        <li>Pakts you create or join (title, duration, apps chosen)</li>
+        <li>Daily check-in records (whether you stayed clean each day)</li>
+        <li>Pakt status events: started, broken, completed, milestones</li>
+        <li>Reputation score and pakt history</li>
+      </ul>
+
+      <p><strong>Screen Time data</strong></p>
+      <p>
+        App selection and usage monitoring are handled entirely on-device by Apple's Screen Time framework (Family Controls / ManagedSettings). We never receive raw app-usage data, screen-on times, or the content of anything you do on your device. The only event transmitted to our servers is a status update — for example "pakt broken" — when the system extension detects that a restricted app was opened.
+      </p>
+
+      <p><strong>Push notification token</strong></p>
+      <p>
+        If you grant notification permission, we store your APNs device token to deliver real-time pakt alerts (e.g., when a group member breaks a pakt or sends an invite).
+      </p>
+
+      <p><strong>Information we do NOT collect</strong></p>
+      <ul>
+        <li>Device location</li>
+        <li>Contacts or address book</li>
+        <li>Photos or camera</li>
+        <li>Advertising identifiers (IDFA)</li>
+        <li>Browsing history or in-app behavior analytics</li>
+      </ul>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 3 -->
+    <section>
+      <h3>3. How We Use Your Information</h3>
+      <ul>
+        <li>Provide, operate, and improve the Pakt app and its features</li>
+        <li>Authenticate your account and keep it secure</li>
+        <li>Display your activity on the social feed (only for public pakts you create)</li>
+        <li>Send push notifications about pakt events you have opted in to receive</li>
+        <li>Calculate reputation scores, streaks, and completion stats shown on your profile</li>
+        <li>Respond to support requests you send to us</li>
+      </ul>
+      <p>We do not use your data for advertising, profiling, or any purpose beyond operating the service.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 4 -->
+    <section>
+      <h3>4. Sharing Your Information</h3>
+      <p>We do not sell, rent, or trade your personal information. We share data only in these limited circumstances:</p>
+      <ul>
+        <li><strong>Other Pakt users</strong> — Your username, display name, reputation score, and public pakt activity are visible to other users as part of the core accountability feature. Private pakts are never shown on the public feed.</li>
+        <li><strong>Supabase</strong> — Our backend database and authentication provider. Data is stored in Supabase infrastructure. See <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.</li>
+        <li><strong>Apple</strong> — Screen Time monitoring runs through Apple's frameworks. App selection data stays on your device and is governed by Apple's privacy policy.</li>
+        <li><strong>Legal requirements</strong> — We may disclose information if required by law or to protect the rights and safety of our users.</li>
+      </ul>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 5 -->
+    <section>
+      <h3>5. Screen Time &amp; Family Controls</h3>
+      <p>
+        Pakt uses Apple's Family Controls entitlement to let you select apps you want to block during an active pakt. This permission is granted by you, is revocable at any time in iOS Settings, and governs only the specific apps you choose.
+      </p>
+      <p>
+        Monitoring happens inside iOS system extensions (Device Activity Monitor, Shield Action) that run independently of the Pakt app. These extensions do not transmit usage details — they only trigger a "pakt broken" status update when a restricted app is opened.
+      </p>
+      <p>
+        All app-selection data (which apps you chose to block) is stored locally in an App Group shared container and is never uploaded to our servers.
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 6 -->
+    <section>
+      <h3>6. Data Retention</h3>
+      <p>
+        We retain your account data for as long as your account is active. Feed events and pakt records are kept to support your profile history and reputation score.
+      </p>
+      <p>
+        If you delete your account, all personally identifiable data (email, display name, username, push token) is permanently deleted. Anonymized aggregate statistics may be retained.
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 7 -->
+    <section>
+      <h3>7. Your Rights &amp; Choices</h3>
+      <ul>
+        <li><strong>Access</strong> — You can view all data associated with your account in the app.</li>
+        <li><strong>Correction</strong> — You can update your display name and username in Profile settings.</li>
+        <li><strong>Deletion</strong> — You can delete your account from Profile settings. This permanently removes all your personal data.</li>
+        <li><strong>Notifications</strong> — You can disable push notifications at any time in iOS Settings → Pakt.</li>
+        <li><strong>Screen Time permission</strong> — You can revoke Family Controls access in iOS Settings → Screen Time at any time.</li>
+      </ul>
+      <p>
+        To exercise any right or for questions about your data, email <a href="mailto:privacy@pakt.app">privacy@pakt.app</a>.
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 8 -->
+    <section>
+      <h3>8. Children's Privacy</h3>
+      <p>
+        Pakt is not directed at children under 13. We do not knowingly collect personal information from anyone under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 9 -->
+    <section>
+      <h3>9. Security</h3>
+      <p>
+        We use industry-standard measures to protect your data, including encrypted connections (HTTPS/TLS) for all data in transit and row-level security policies in our database so users can only access their own data.
+      </p>
+      <p>
+        No method of electronic storage is 100% secure. If you discover a security issue, please report it responsibly to <a href="mailto:privacy@pakt.app">privacy@pakt.app</a>.
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 10 -->
+    <section>
+      <h3>10. Changes to This Policy</h3>
+      <p>
+        We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. For significant changes, we will notify you via an in-app message or email. Continued use of Pakt after changes are posted constitutes your acceptance of the updated policy.
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- 11 -->
+    <section>
+      <h3>11. Contact Us</h3>
+      <p>
+        If you have any questions about this Privacy Policy or your data, contact us at:
+      </p>
+      <ul>
+        <li>Email: <a href="mailto:privacy@pakt.app">privacy@pakt.app</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Pakt &nbsp;·&nbsp;
+    <a href="mailto:privacy@pakt.app">Contact</a>
+  </footer>
+
+</body>
+</html>
