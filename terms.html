@@ -1,347 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SMS Terms – Pakt</title>
-  <style>
-    :root {
-      --bg: #080808;
-      --card: #111111;
-      --border: #1e1e1e;
-      --cyan: #00E0C6;
-      --text: #ffffff;
-      --muted: #888888;
-      --body-font: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakt Terms of Service</title>
+    <style>
+        :root {
+            --pakt-background: #f9f5ff;
+            --pakt-background-soft: #fcf7ff;
+            --pakt-lavender: #e2d2fe;
+            --pakt-blue-mist: #bae5f4;
+            --pakt-blush: #fccdcd;
+            --pakt-rose: #ec92aa;
+            --pakt-plum: #7055a2;
+            --pakt-ink: #2c2949;
+            --pakt-muted-ink: #716f8a;
+            --pakt-red: #db6377;
+            --glass-fill: rgba(255, 255, 255, 0.82);
+            --glass-border: rgba(255, 255, 255, 0.72);
+            --glass-shadow: rgba(112, 85, 162, 0.08);
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--body-font);
-      font-size: 16px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
+        body {
+            margin: 0;
+            font-family: "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: var(--pakt-ink);
+            background:
+                radial-gradient(circle at 12% 8%, rgba(226, 210, 254, 0.75) 0, rgba(226, 210, 254, 0) 28%),
+                radial-gradient(circle at 82% 14%, rgba(186, 229, 244, 0.62) 0, rgba(186, 229, 244, 0) 26%),
+                radial-gradient(circle at 82% 82%, rgba(252, 205, 205, 0.55) 0, rgba(252, 205, 205, 0) 24%),
+                linear-gradient(135deg, var(--pakt-background) 0%, var(--pakt-background-soft) 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
 
-    header {
-      border-bottom: 1px solid var(--border);
-      padding: 28px 24px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+        .shell {
+            width: min(1100px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 32px 0 64px;
+        }
 
-    .logo-rings {
-      width: 32px;
-      height: 32px;
-      position: relative;
-      flex-shrink: 0;
-    }
+        .glass {
+            background: var(--glass-fill);
+            border: 1px solid var(--glass-border);
+            border-radius: 26px;
+            box-shadow: 0 10px 18px var(--glass-shadow);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
 
-    .logo-rings::before,
-    .logo-rings::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      border: 2.5px solid var(--cyan);
-      width: 22px;
-      height: 22px;
-      top: 5px;
-    }
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 40px 36px;
+            margin-bottom: 20px;
+        }
 
-    .logo-rings::before { left: 0; }
-    .logo-rings::after  { left: 10px; }
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: auto -80px -100px auto;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(112, 85, 162, 0.2), rgba(112, 85, 162, 0));
+            filter: blur(10px);
+            pointer-events: none;
+        }
 
-    header h1 {
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: -0.2px;
-    }
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(226, 210, 254, 0.6);
+            color: var(--pakt-plum);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
 
-    header h1 span {
-      color: var(--cyan);
-    }
+        h1, h2, h3 {
+            font-family: "SF Pro Rounded", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: var(--pakt-ink);
+            margin: 0;
+        }
 
-    main {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 56px 24px 80px;
-    }
+        h1 {
+            margin-top: 18px;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            line-height: 0.98;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
 
-    .hero-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--cyan);
-      margin-bottom: 12px;
-    }
+        .hero-copy {
+            width: min(650px, 100%);
+            margin-top: 16px;
+            font-size: 17px;
+            color: var(--pakt-muted-ink);
+        }
 
-    h2.page-title {
-      font-size: 36px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      line-height: 1.2;
-      margin-bottom: 8px;
-    }
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 28px;
+        }
 
-    .effective-date {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 48px;
-    }
+        .meta-card {
+            padding: 16px 18px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.52);
+            border: 1px solid rgba(255, 255, 255, 0.78);
+        }
 
-    .intro {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--cyan);
-      border-radius: 8px;
-      padding: 20px 24px;
-      font-size: 15px;
-      color: #cccccc;
-      margin-bottom: 48px;
-    }
+        .meta-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--pakt-muted-ink);
+        }
 
-    section {
-      margin-bottom: 40px;
-    }
+        .meta-value {
+            margin-top: 6px;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--pakt-ink);
+        }
 
-    h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: var(--text);
-    }
+        .layout {
+            display: grid;
+            grid-template-columns: 280px minmax(0, 1fr);
+            gap: 20px;
+            align-items: start;
+        }
 
-    p {
-      color: #cccccc;
-      margin-bottom: 12px;
-      font-size: 15px;
-    }
+        .sidebar {
+            position: sticky;
+            top: 20px;
+            padding: 22px;
+        }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 12px;
-    }
+        .sidebar h2 {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
 
-    ul li {
-      color: #cccccc;
-      font-size: 15px;
-      padding: 6px 0 6px 20px;
-      position: relative;
-      border-bottom: 1px solid var(--border);
-    }
+        .nav {
+            display: grid;
+            gap: 8px;
+        }
 
-    ul li:last-child {
-      border-bottom: none;
-    }
+        .nav a {
+            display: block;
+            padding: 10px 12px;
+            border-radius: 16px;
+            color: var(--pakt-muted-ink);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+        }
 
-    ul li::before {
-      content: "–";
-      position: absolute;
-      left: 0;
-      color: var(--cyan);
-    }
+        .nav a:hover {
+            background: rgba(226, 210, 254, 0.42);
+            color: var(--pakt-plum);
+            transform: translateX(2px);
+        }
 
-    .highlight-box {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 20px 24px;
-      margin-bottom: 24px;
-    }
+        .content {
+            padding: 28px;
+        }
 
-    .highlight-box p {
-      margin-bottom: 8px;
-    }
+        .section {
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(113, 111, 138, 0.14);
+        }
 
-    .highlight-box p:last-child {
-      margin-bottom: 0;
-    }
+        .section:first-child {
+            padding-top: 0;
+        }
 
-    .highlight-box strong {
-      color: var(--text);
-    }
+        .section:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
 
-    a {
-      color: var(--cyan);
-      text-decoration: none;
-    }
+        .section h2 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 14px;
+            letter-spacing: -0.03em;
+        }
 
-    a:hover {
-      text-decoration: underline;
-    }
+        .section h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
 
-    .divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 40px 0;
-    }
+        p {
+            margin: 0 0 14px;
+            color: var(--pakt-ink);
+            font-size: 16px;
+        }
 
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 24px;
-      text-align: center;
-      font-size: 13px;
-      color: var(--muted);
-    }
+        .muted {
+            color: var(--pakt-muted-ink);
+        }
 
-    footer a {
-      color: var(--muted);
-    }
+        ul {
+            margin: 0 0 14px;
+            padding-left: 20px;
+        }
 
-    footer a:hover {
-      color: var(--cyan);
-    }
+        li {
+            margin-bottom: 10px;
+            color: var(--pakt-ink);
+        }
 
-    @media (max-width: 600px) {
-      h2.page-title { font-size: 28px; }
-      main { padding: 40px 16px 64px; }
-    }
-  </style>
+        .callout {
+            padding: 18px 20px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, rgba(226, 210, 254, 0.48), rgba(252, 205, 205, 0.38));
+            border: 1px solid rgba(255, 255, 255, 0.82);
+            color: var(--pakt-plum);
+            font-weight: 700;
+            margin: 18px 0;
+        }
+
+        .warning {
+            padding: 18px 20px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, rgba(252, 205, 205, 0.5), rgba(236, 146, 170, 0.25));
+            border: 1px solid rgba(255, 255, 255, 0.82);
+            color: #8f3753;
+            font-weight: 700;
+            margin: 18px 0;
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding: 22px 24px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--pakt-muted-ink);
+        }
+
+        .footer strong {
+            color: var(--pakt-rose);
+        }
+
+        @media (max-width: 920px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .shell {
+                width: min(100% - 20px, 1100px);
+                padding-top: 18px;
+            }
+
+            .hero {
+                padding: 28px 22px;
+            }
+
+            .content {
+                padding: 22px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="shell">
+        <section class="hero glass">
+            <div class="eyebrow">Pakt Legal</div>
+            <h1>Terms of Service</h1>
+            <p class="hero-copy">
+                These terms govern use of the Pakt app, including account rules,
+                Screen Time features, subscription billing, public feed behavior,
+                and the limits of the service.
+            </p>
+            <div class="meta-grid">
+                <div class="meta-card">
+                    <div class="meta-label">Effective Date</div>
+                    <div class="meta-value">March 9, 2026</div>
+                </div>
+                <div class="meta-card">
+                    <div class="meta-label">Last Updated</div>
+                    <div class="meta-value">March 9, 2026</div>
+                </div>
+                <div class="meta-card">
+                    <div class="meta-label">Contact</div>
+                    <div class="meta-value">legal@paktapp.com</div>
+                </div>
+            </div>
+        </section>
 
-  <header>
-    <div class="logo-rings" aria-hidden="true"></div>
-    <h1>Pakt<span>.</span></h1>
-  </header>
+        <div class="layout">
+            <aside class="sidebar glass">
+                <h2>Sections</h2>
+                <nav class="nav">
+                    <a href="#eligibility">Eligibility</a>
+                    <a href="#accounts">Accounts</a>
+                    <a href="#acceptable-use">Acceptable Use</a>
+                    <a href="#pakt-features-and-screen-time">Pakt Features and Screen Time</a>
+                    <a href="#subscriptions-and-payments">Subscriptions and Payments</a>
+                    <a href="#user-content">User Content</a>
+                    <a href="#public-feed">Public Feed</a>
+                    <a href="#termination">Termination</a>
+                    <a href="#disclaimers">Disclaimers</a>
+                    <a href="#limitation-of-liability">Limitation of Liability</a>
+                    <a href="#governing-law">Governing Law</a>
+                    <a href="#changes-to-these-terms">Changes to These Terms</a>
+                    <a href="#contact-us">Contact Us</a>
+                </nav>
+            </aside>
 
-  <main>
-    <div class="hero-label">Legal</div>
-    <h2 class="page-title">SMS Terms &amp; Conditions</h2>
-    <p class="effective-date">Effective date: March 14, 2026 &nbsp;·&nbsp; Last updated: March 14, 2026</p>
+            <main class="content glass">
+                <section class="section" id="eligibility">
+                    <h2>1. Eligibility</h2>
+                    <p>You must be at least 13 years old to use Pakt. By using the app, you confirm that you meet this requirement.</p>
+                    <p class="muted">Because Pakt uses Apple's Screen Time and Family Controls frameworks, Apple may impose additional age or jurisdiction requirements in some markets. You are responsible for ensuring your use complies with local law.</p>
+                </section>
 
-    <div class="intro">
-      These SMS Terms apply to the accountability partner text message feature in the Pakt app. By using this feature, you agree to the terms below.
+                <section class="section" id="accounts">
+                    <h2>2. Accounts</h2>
+                    <ul>
+                        <li>You are responsible for maintaining the confidentiality of your account credentials.</li>
+                        <li>You are responsible for all activity that occurs under your account.</li>
+                        <li>You must provide accurate information when creating your account.</li>
+                        <li>You may not create more than one account or create an account on behalf of another person without consent.</li>
+                        <li>We may suspend or terminate accounts that violate these Terms.</li>
+                    </ul>
+                </section>
+
+                <section class="section" id="acceptable-use">
+                    <h2>3. Acceptable Use</h2>
+                    <p>You agree not to:</p>
+                    <ul>
+                        <li>Use the app for unlawful purposes.</li>
+                        <li>Harass, bully, or abuse other users.</li>
+                        <li>Attempt unauthorized access to accounts or systems.</li>
+                        <li>Interfere with infrastructure or disrupt service availability.</li>
+                        <li>Send spam or unsolicited communications.</li>
+                        <li>Reverse-engineer, decompile, or extract source code from the app.</li>
+                        <li>Create fake accounts or misrepresent your identity.</li>
+                    </ul>
+                </section>
+
+                <section class="section" id="pakt-features-and-screen-time">
+                    <h2>4. Pakt Features and Screen Time</h2>
+                    <div class="warning">
+                        App blocking depends on Apple Screen Time permissions and platform behavior. It cannot be guaranteed in every circumstance.
+                    </div>
+                    <ul>
+                        <li>A pakt violation is recorded when Apple's frameworks report that a restricted app was opened.</li>
+                        <li>We are not responsible for false positives, missed detections, or platform-level failures outside our control.</li>
+                        <li>Bypassing restrictions through revoking permissions, deleting the app, or using another device undermines the intended accountability model of the service.</li>
+                    </ul>
+                </section>
+
+                <section class="section" id="subscriptions-and-payments">
+                    <h2>5. Subscriptions and Payments</h2>
+                    <ul>
+                        <li>Pakt offers optional paid subscriptions on monthly or yearly billing cycles.</li>
+                        <li>All purchases are processed by Apple through the App Store.</li>
+                        <li>Subscriptions automatically renew unless canceled at least 24 hours before the end of the current billing period.</li>
+                        <li>Refunds are handled by Apple under its App Store policies.</li>
+                        <li>Subscription prices may change with notice.</li>
+                    </ul>
+                    <div class="callout">
+                        Manage or cancel subscriptions in iOS under Settings &gt; Apple ID &gt; Subscriptions.
+                    </div>
+                </section>
+
+                <section class="section" id="user-content">
+                    <h2>6. User Content</h2>
+                    <ul>
+                        <li>You retain ownership of content you submit, such as pakt titles and display names.</li>
+                        <li>You grant Pakt a limited, non-exclusive license to display and use that content to operate the service.</li>
+                        <li>You are responsible for submitted content and should not include other people's personal information in public-facing content.</li>
+                    </ul>
+                </section>
+
+                <section class="section" id="public-feed">
+                    <h2>7. Public Feed</h2>
+                    <ul>
+                        <li>Pakts marked public may display started, completed, and broken events to all app users.</li>
+                        <li>Choose private pakts if you do not want activity visible beyond your selected participants.</li>
+                        <li>We may remove feed content that violates these Terms.</li>
+                    </ul>
+                </section>
+
+                <section class="section" id="termination">
+                    <h2>8. Termination</h2>
+                    <p>We may suspend or terminate accounts that violate these Terms, abuse other users, or attempt to manipulate or exploit the service.</p>
+                    <p>You may stop using the service and request account deletion at any time. Data handling after account deletion is governed by the Privacy Policy.</p>
+                </section>
+
+                <section class="section" id="disclaimers">
+                    <h2>9. Disclaimers</h2>
+                    <div class="warning">
+                        The app is provided "as is" and "as available" without warranties of any kind, express or implied.
+                    </div>
+                    <ul>
+                        <li>We do not guarantee uninterrupted or error-free operation.</li>
+                        <li>We do not guarantee that app blocking will be effective 100 percent of the time.</li>
+                        <li>We do not guarantee indefinite preservation of pakt data.</li>
+                    </ul>
+                </section>
+
+                <section class="section" id="limitation-of-liability">
+                    <h2>10. Limitation of Liability</h2>
+                    <p>To the maximum extent permitted by applicable law, Pakt is not liable for indirect, incidental, special, consequential, or punitive damages, including loss of data, arising out of or related to your use of the app.</p>
+                    <p>Our total liability for any claim arising from these Terms or the service will not exceed the amount you paid us in the 12 months preceding the claim.</p>
+                </section>
+
+                <section class="section" id="governing-law">
+                    <h2>11. Governing Law</h2>
+                    <p>These Terms are governed by the laws of <strong>[YOUR STATE]</strong>, without regard to conflict-of-law principles. Any dispute will be resolved in the courts of <strong>[YOUR JURISDICTION]</strong>.</p>
+                    <p class="muted">Replace these placeholders before publishing.</p>
+                </section>
+
+                <section class="section" id="changes-to-these-terms">
+                    <h2>12. Changes to These Terms</h2>
+                    <p>We may update these Terms from time to time. For material changes, we may notify users through an in-app notice or push notification. Continued use of the app after changes take effect constitutes acceptance of the revised Terms.</p>
+                </section>
+
+                <section class="section" id="contact-us">
+                    <h2>13. Contact Us</h2>
+                    <p>If you have questions about these Terms, contact:</p>
+                    <div class="callout">
+                        legal@paktapp.com<br>
+                        Replace this email before publishing if your live support address is different.
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer class="footer glass">
+            <strong>Pakt</strong><br>
+            Hold yourself accountable.
+        </footer>
     </div>
-
-    <!-- Program description -->
-    <section>
-      <h3>Program Description</h3>
-      <p>
-        Pakt's accountability partner feature allows users to designate one or more phone numbers to receive SMS text message alerts when a pakt is broken. These messages are sent on behalf of the Pakt user who created the pakt and added the recipient's number.
-      </p>
-      <p>
-        SMS messages are sent by Pakt and are triggered solely by pakt activity — specifically, when a user opens a restricted app during an active pakt period.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- Message frequency -->
-    <section>
-      <h3>Message Frequency</h3>
-      <p>
-        Accountability partners may receive up to <strong>3 SMS messages per day</strong>. Message volume varies based on pakt activity. Messages are only sent when a pakt is broken — no promotional or marketing messages are sent.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- Consent -->
-    <section>
-      <h3>Consent</h3>
-      <p>
-        The Pakt app user who adds an accountability partner's phone number confirms, at the time of entry, that:
-      </p>
-      <ul>
-        <li>They have obtained the explicit prior consent of the recipient to receive SMS messages from Pakt.</li>
-        <li>The recipient is aware of the nature and frequency of the messages they may receive.</li>
-        <li>They are authorized to provide the recipient's phone number for this purpose.</li>
-      </ul>
-      <p>
-        Pakt does not independently verify consent with the recipient. Full responsibility for obtaining consent rests with the Pakt user adding the phone number.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- Opt-out -->
-    <section>
-      <h3>How to Opt Out</h3>
-      <p>
-        Recipients can stop receiving SMS messages at any time using either of the following methods:
-      </p>
-      <ul>
-        <li>Reply <strong>STOP</strong> to any SMS message received from Pakt. No further messages will be sent to that number.</li>
-        <li>Ask the Pakt user who added their number to remove it from the app.</li>
-      </ul>
-      <p>
-        After opting out via STOP, if you wish to re-enable messages, reply <strong>START</strong> to the same number.
-      </p>
-      <p>
-        For help, reply <strong>HELP</strong> to any message or contact us at <a href="mailto:support@pakt.app">support@pakt.app</a>.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- Rates -->
-    <section>
-      <h3>Message &amp; Data Rates</h3>
-      <div class="highlight-box">
-        <p><strong>Message and data rates may apply.</strong></p>
-        <p>Charges depend on your mobile carrier plan. Pakt is not responsible for any fees charged by your carrier for receiving SMS messages.</p>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- Supported carriers -->
-    <section>
-      <h3>Supported Carriers</h3>
-      <p>
-        SMS delivery is supported for most major US carriers including AT&amp;T, T-Mobile, Verizon, Sprint, Boost Mobile, Cricket, Metro PCS, and others. Carrier support may vary. Pakt is not liable for messages not delivered due to carrier limitations.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- Misuse -->
-    <section>
-      <h3>Misuse &amp; Enforcement</h3>
-      <p>
-        We reserve the right to suspend or permanently disable SMS access for any account that:
-      </p>
-      <ul>
-        <li>Adds phone numbers without the recipient's consent.</li>
-        <li>Receives opt-out complaints or carrier spam reports.</li>
-        <li>Uses the feature to harass or send unwanted messages to recipients.</li>
-      </ul>
-      <p>
-        Misuse of the SMS feature may also result in account termination under our <a href="./terms.html">Terms &amp; Conditions</a>.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- Contact -->
-    <section>
-      <h3>Contact Us</h3>
-      <p>
-        For questions about these SMS Terms or to report an issue, contact us at:
-      </p>
-      <ul>
-        <li>Email: <a href="mailto:support@pakt.app">support@pakt.app</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2026 Pakt &nbsp;·&nbsp;
-    <a href="./privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
-    <a href="./terms.html">Terms &amp; Conditions</a> &nbsp;·&nbsp;
-    <a href="mailto:support@pakt.app">Contact</a>
-  </footer>
-
 </body>
 </html>
