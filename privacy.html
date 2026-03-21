@@ -1,389 +1,551 @@
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Pakt</title>
-  <style>
-    :root {
-      --bg: #080808;
-      --card: #111111;
-      --border: #1e1e1e;
-      --cyan: #00E0C6;
-      --text: #ffffff;
-      --muted: #888888;
-      --body-font: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakt Privacy Policy</title>
+    <style>
+        :root {
+            --pakt-background: #f9f5ff;
+            --pakt-background-soft: #fcf7ff;
+            --pakt-lavender: #e2d2fe;
+            --pakt-blue-mist: #bae5f4;
+            --pakt-blush: #fccdcd;
+            --pakt-rose: #ec92aa;
+            --pakt-plum: #7055a2;
+            --pakt-ink: #2c2949;
+            --pakt-muted-ink: #716f8a;
+            --pakt-green: #4aa37b;
+            --pakt-red: #db6377;
+            --glass-fill: rgba(255, 255, 255, 0.82);
+            --glass-border: rgba(255, 255, 255, 0.72);
+            --glass-shadow: rgba(112, 85, 162, 0.08);
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--body-font);
-      font-size: 16px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    header {
-      border-bottom: 1px solid var(--border);
-      padding: 28px 24px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+        body {
+            margin: 0;
+            font-family: "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: var(--pakt-ink);
+            background:
+                radial-gradient(circle at 12% 8%, rgba(226, 210, 254, 0.75) 0, rgba(226, 210, 254, 0) 28%),
+                radial-gradient(circle at 82% 14%, rgba(186, 229, 244, 0.62) 0, rgba(186, 229, 244, 0) 26%),
+                radial-gradient(circle at 82% 82%, rgba(252, 205, 205, 0.55) 0, rgba(252, 205, 205, 0) 24%),
+                linear-gradient(135deg, var(--pakt-background) 0%, var(--pakt-background-soft) 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
 
-    .logo-rings {
-      width: 32px;
-      height: 32px;
-      position: relative;
-      flex-shrink: 0;
-    }
+        .shell {
+            width: min(1100px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 32px 0 64px;
+        }
 
-    .logo-rings::before,
-    .logo-rings::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      border: 2.5px solid var(--cyan);
-      width: 22px;
-      height: 22px;
-      top: 5px;
-    }
+        .glass {
+            background: var(--glass-fill);
+            border: 1px solid var(--glass-border);
+            border-radius: 26px;
+            box-shadow: 0 10px 18px var(--glass-shadow);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
 
-    .logo-rings::before { left: 0; }
-    .logo-rings::after  { left: 10px; }
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 40px 36px;
+            margin-bottom: 20px;
+        }
 
-    header h1 {
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: -0.2px;
-    }
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: auto -80px -100px auto;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(236, 146, 170, 0.18), rgba(236, 146, 170, 0));
+            filter: blur(10px);
+            pointer-events: none;
+        }
 
-    header h1 span {
-      color: var(--cyan);
-    }
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(252, 205, 205, 0.58);
+            color: var(--pakt-rose);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
 
-    main {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 56px 24px 80px;
-    }
+        h1, h2, h3 {
+            font-family: "SF Pro Rounded", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: var(--pakt-ink);
+            margin: 0;
+        }
 
-    .hero-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--cyan);
-      margin-bottom: 12px;
-    }
+        h1 {
+            margin-top: 18px;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            line-height: 0.98;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
 
-    h2.page-title {
-      font-size: 36px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      line-height: 1.2;
-      margin-bottom: 8px;
-    }
+        .hero-copy {
+            width: min(620px, 100%);
+            margin-top: 16px;
+            font-size: 17px;
+            color: var(--pakt-muted-ink);
+        }
 
-    .effective-date {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 48px;
-    }
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 28px;
+        }
 
-    .intro {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--cyan);
-      border-radius: 8px;
-      padding: 20px 24px;
-      font-size: 15px;
-      color: #cccccc;
-      margin-bottom: 48px;
-    }
+        .meta-card {
+            padding: 16px 18px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.52);
+            border: 1px solid rgba(255, 255, 255, 0.78);
+        }
 
-    section {
-      margin-bottom: 40px;
-    }
+        .meta-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--pakt-muted-ink);
+        }
 
-    h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: var(--text);
-    }
+        .meta-value {
+            margin-top: 6px;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--pakt-ink);
+        }
 
-    p {
-      color: #cccccc;
-      margin-bottom: 12px;
-      font-size: 15px;
-    }
+        .layout {
+            display: grid;
+            grid-template-columns: 280px minmax(0, 1fr);
+            gap: 20px;
+            align-items: start;
+        }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 12px;
-    }
+        .sidebar {
+            position: sticky;
+            top: 20px;
+            padding: 22px;
+        }
 
-    ul li {
-      color: #cccccc;
-      font-size: 15px;
-      padding: 6px 0 6px 20px;
-      position: relative;
-      border-bottom: 1px solid var(--border);
-    }
+        .sidebar h2 {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
 
-    ul li:last-child {
-      border-bottom: none;
-    }
+        .nav {
+            display: grid;
+            gap: 8px;
+        }
 
-    ul li::before {
-      content: "–";
-      position: absolute;
-      left: 0;
-      color: var(--cyan);
-    }
+        .nav a {
+            display: block;
+            padding: 10px 12px;
+            border-radius: 16px;
+            color: var(--pakt-muted-ink);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+        }
 
-    a {
-      color: var(--cyan);
-      text-decoration: none;
-    }
+        .nav a:hover {
+            background: rgba(226, 210, 254, 0.42);
+            color: var(--pakt-plum);
+            transform: translateX(2px);
+        }
 
-    a:hover {
-      text-decoration: underline;
-    }
+        .content {
+            padding: 28px;
+        }
 
-    .divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 40px 0;
-    }
+        .section {
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(113, 111, 138, 0.14);
+        }
 
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 24px;
-      text-align: center;
-      font-size: 13px;
-      color: var(--muted);
-    }
+        .section:first-child {
+            padding-top: 0;
+        }
 
-    footer a {
-      color: var(--muted);
-    }
+        .section:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
 
-    footer a:hover {
-      color: var(--cyan);
-    }
+        .section h2 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 14px;
+            letter-spacing: -0.03em;
+        }
 
-    @media (max-width: 600px) {
-      h2.page-title { font-size: 28px; }
-      main { padding: 40px 16px 64px; }
-    }
-  </style>
+        .section h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 0 0 14px;
+            color: var(--pakt-ink);
+            font-size: 16px;
+        }
+
+        .muted {
+            color: var(--pakt-muted-ink);
+        }
+
+        ul {
+            margin: 0 0 14px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: var(--pakt-ink);
+        }
+
+        .callout {
+            padding: 18px 20px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, rgba(226, 210, 254, 0.48), rgba(186, 229, 244, 0.38));
+            border: 1px solid rgba(255, 255, 255, 0.82);
+            color: var(--pakt-plum);
+            font-weight: 700;
+            margin: 18px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            overflow: hidden;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.55);
+        }
+
+        th, td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(113, 111, 138, 0.12);
+            vertical-align: top;
+        }
+
+        th {
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--pakt-muted-ink);
+        }
+
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding: 22px 24px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--pakt-muted-ink);
+        }
+
+        .footer strong {
+            color: var(--pakt-rose);
+        }
+
+        @media (max-width: 920px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .shell {
+                width: min(100% - 20px, 1100px);
+                padding-top: 18px;
+            }
+
+            .hero {
+                padding: 28px 22px;
+            }
+
+            .content {
+                padding: 22px;
+            }
+
+            h1 {
+                letter-spacing: -0.05em;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="shell">
+        <section class="hero glass">
+            <div class="eyebrow">Pakt Legal</div>
+            <h1>Privacy Policy</h1>
+            <p class="hero-copy">
+                This policy explains what Pakt collects, how that information is used,
+                and the controls users have over Screen Time monitoring, account data,
+                and accountability activity inside the app.
+            </p>
+            <div class="meta-grid">
+                <div class="meta-card">
+                    <div class="meta-label">Effective Date</div>
+                    <div class="meta-value">March 9, 2026</div>
+                </div>
+                <div class="meta-card">
+                    <div class="meta-label">Last Updated</div>
+                    <div class="meta-value">March 9, 2026</div>
+                </div>
+                <div class="meta-card">
+                    <div class="meta-label">Contact</div>
+                    <div class="meta-value">privacy@paktapp.com</div>
+                </div>
+            </div>
+        </section>
 
-  <header>
-    <div class="logo-rings" aria-hidden="true"></div>
-    <h1>Pakt<span>.</span></h1>
-  </header>
+        <div class="layout">
+            <aside class="sidebar glass">
+                <h2>Sections</h2>
+                <nav class="nav">
+                    <a href="#information-we-collect">Information We Collect</a>
+                    <a href="#how-we-use-your-information">How We Use Your Information</a>
+                    <a href="#screen-time-and-app-blocking">Screen Time and App Blocking</a>
+                    <a href="#how-we-share-your-information">How We Share Information</a>
+                    <a href="#data-retention">Data Retention</a>
+                    <a href="#your-rights">Your Rights</a>
+                    <a href="#childrens-privacy">Children's Privacy</a>
+                    <a href="#security">Security</a>
+                    <a href="#changes-to-this-policy">Changes to This Policy</a>
+                    <a href="#contact-us">Contact Us</a>
+                </nav>
+            </aside>
 
-  <main>
-    <div class="hero-label">Legal</div>
-    <h2 class="page-title">Privacy Policy</h2>
-    <p class="effective-date">Effective date: March 14, 2026 &nbsp;·&nbsp; Last updated: March 14, 2026</p>
+            <main class="content glass">
+                <section class="section" id="information-we-collect">
+                    <h2>1. Information We Collect</h2>
+                    <h3>1.1 Information You Provide</h3>
+                    <ul>
+                        <li><strong>Account information:</strong> Email address, display name, and username when you create an account.</li>
+                        <li><strong>Profile content:</strong> Any updates you make to your display name or profile.</li>
+                    </ul>
 
-    <div class="intro">
-      Pakt is built on a simple belief: your data belongs to you. We collect the minimum information required to run the app, keep everything as private as possible, and never sell your data.
+                    <h3>1.2 Information Collected Automatically</h3>
+                    <ul>
+                        <li><strong>Pakt activity:</strong> Pakts you create or join, their titles, duration, selected apps for blocking, start and end dates, and whether you completed or broke them.</li>
+                        <li><strong>Check-in history:</strong> Daily check-in records tied to your active pakts.</li>
+                        <li><strong>Reputation and statistics:</strong> Computed scores based on your pakt history, including pakts completed, pakts broken, and success rate.</li>
+                        <li><strong>Feed events:</strong> Activity posted to the public feed when you start, complete, or break a public pakt.</li>
+                        <li><strong>Device push token:</strong> A device identifier used to deliver push notifications about pakt activity.</li>
+                        <li><strong>App usage via Screen Time:</strong> When you grant Screen Time permission, Pakt uses Apple's Family Controls framework to monitor whether you open apps you selected for restriction. Monitoring occurs on-device. Violation events are recorded locally and synced to Pakt servers to update pakt status and notify group members.</li>
+                    </ul>
+
+                    <h3>1.3 Information We Do Not Collect</h3>
+                    <ul>
+                        <li>We do not collect your location.</li>
+                        <li>We do not collect your contacts, messages, photos, or camera data.</li>
+                        <li>We do not use advertising identifiers or track you across other apps or websites.</li>
+                        <li>We do not sell your data to third parties.</li>
+                    </ul>
+                </section>
+
+                <section class="section" id="how-we-use-your-information">
+                    <h2>2. How We Use Your Information</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Purpose</th>
+                                <th>Data Used</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Account creation and authentication</td>
+                                <td>Email, display name, username</td>
+                            </tr>
+                            <tr>
+                                <td>Running pakt features</td>
+                                <td>App selection, pakt data, Screen Time events</td>
+                            </tr>
+                            <tr>
+                                <td>Sending notifications</td>
+                                <td>Push token</td>
+                            </tr>
+                            <tr>
+                                <td>Displaying your profile and reputation</td>
+                                <td>Pakt history and stats</td>
+                            </tr>
+                            <tr>
+                                <td>Showing the public activity feed</td>
+                                <td>Feed events for public pakts</td>
+                            </tr>
+                            <tr>
+                                <td>Group accountability features</td>
+                                <td>Pakt membership and violation events</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>We use your information solely to operate the app. We do not use it for advertising, profiling, or unrelated targeting.</p>
+                </section>
+
+                <section class="section" id="screen-time-and-app-blocking">
+                    <h2>3. Screen Time and App Blocking</h2>
+                    <div class="callout">
+                        Pakt uses Apple's Family Controls and Screen Time frameworks only after explicit permission is granted by the user.
+                    </div>
+                    <ul>
+                        <li>Monitoring is limited to apps you select when creating a pakt.</li>
+                        <li>The app detects when a restricted app is opened and records this as a pakt violation.</li>
+                        <li>Violation data is synced to our servers and shared with your pakt group members when applicable.</li>
+                        <li>You can revoke Screen Time permission at any time in iOS Settings. Revoking permission disables app blocking but does not automatically delete existing pakt data.</li>
+                    </ul>
+                </section>
+
+                <section class="section" id="how-we-share-your-information">
+                    <h2>4. How We Share Your Information</h2>
+                    <p>We do not sell, rent, or trade personal information. We share data only in limited cases necessary to operate the service.</p>
+
+                    <h3>4.1 With Other Users</h3>
+                    <ul>
+                        <li>Your username and display name are visible to other users in group pakts and on the public feed.</li>
+                        <li>Pakt activity such as started, completed, or broken events is visible to pakt group members and, for public pakts, to all users of the app.</li>
+                        <li>Your reputation score and related statistics are visible on your profile.</li>
+                    </ul>
+
+                    <h3>4.2 With Service Providers</h3>
+                    <ul>
+                        <li><strong>Supabase:</strong> Used for backend database and authentication.</li>
+                        <li><strong>Apple:</strong> Push notifications are delivered through APNs.</li>
+                        <li><strong>Apple StoreKit:</strong> Subscription purchases are processed by Apple. Pakt does not receive or store payment card details.</li>
+                    </ul>
+
+                    <h3>4.3 Legal Requirements</h3>
+                    <p>We may disclose information if required by law, court order, or if necessary to protect the rights, safety, and integrity of users or the service.</p>
+                </section>
+
+                <section class="section" id="data-retention">
+                    <h2>5. Data Retention</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Retention Period</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Account data</td>
+                                <td>Until you delete your account</td>
+                            </tr>
+                            <tr>
+                                <td>Pakt and check-in history</td>
+                                <td>Until you delete your account</td>
+                            </tr>
+                            <tr>
+                                <td>Feed events</td>
+                                <td>Until you delete your account or request removal</td>
+                            </tr>
+                            <tr>
+                                <td>Push tokens</td>
+                                <td>Until replaced by a new token or account deletion</td>
+                            </tr>
+                            <tr>
+                                <td>Screen Time violation records</td>
+                                <td>Until you delete your account</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>After account deletion, personal data will be removed from our systems within 30 days unless a longer retention period is required by law.</p>
+                </section>
+
+                <section class="section" id="your-rights">
+                    <h2>6. Your Rights</h2>
+                    <p>Regardless of where you are located, you can request to:</p>
+                    <ul>
+                        <li>Access the personal data we hold about you.</li>
+                        <li>Correct inaccurate data.</li>
+                        <li>Delete your account and associated data.</li>
+                        <li>Export your data in a portable format.</li>
+                        <li>Withdraw consent for Screen Time monitoring through iOS Settings.</li>
+                    </ul>
+                    <p>To exercise these rights, contact us using the details in Section 10. We aim to respond within 30 days.</p>
+                </section>
+
+                <section class="section" id="childrens-privacy">
+                    <h2>7. Children's Privacy</h2>
+                    <p>Pakt is not directed to children under 13. We do not knowingly collect personal information from children under 13. If we learn that a child under 13 has provided personal information, we will delete it promptly.</p>
+                </section>
+
+                <section class="section" id="security">
+                    <h2>8. Security</h2>
+                    <ul>
+                        <li>All data is transmitted over HTTPS and TLS.</li>
+                        <li>Authentication is managed through Supabase Auth using industry-standard password protections.</li>
+                        <li>Database access is restricted with Row Level Security policies.</li>
+                    </ul>
+                    <p class="muted">No transmission or storage system is completely secure, and absolute security cannot be guaranteed.</p>
+                </section>
+
+                <section class="section" id="changes-to-this-policy">
+                    <h2>9. Changes to This Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. When we do, the Last Updated date will change. For material changes, we may notify users through an in-app notice or push notification.</p>
+                </section>
+
+                <section class="section" id="contact-us">
+                    <h2>10. Contact Us</h2>
+                    <p>If you have questions about this Privacy Policy or want to exercise your data rights, contact:</p>
+                    <div class="callout">
+                        privacy@paktapp.com<br>
+                        Replace this email before publishing if your live support address is different.
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer class="footer glass">
+            <strong>Pakt</strong><br>
+            Hold yourself accountable.
+        </footer>
     </div>
-
-    <!-- 1 -->
-    <section>
-      <h3>1. Who We Are</h3>
-      <p>
-        Pakt ("we", "our", or "us") is a social accountability iOS app that helps you commit to avoiding distracting apps — alone or with friends. This Privacy Policy explains what information we collect, how we use it, and what choices you have.
-      </p>
-      <p>
-        If you have questions, contact us at <a href="mailto:privacy@pakt.app">privacy@pakt.app</a>.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 2 -->
-    <section>
-      <h3>2. Information We Collect</h3>
-
-      <p><strong>Account information</strong></p>
-      <p>When you create an account we collect:</p>
-      <ul>
-        <li>Email address (used for authentication only)</li>
-        <li>Display name and username (shown to other users)</li>
-      </ul>
-
-      <p><strong>Pakt activity</strong></p>
-      <p>To power the social feed and accountability features we store:</p>
-      <ul>
-        <li>Pakts you create or join (title, duration, apps chosen)</li>
-        <li>Daily check-in records (whether you stayed clean each day)</li>
-        <li>Pakt status events: started, broken, completed, milestones</li>
-        <li>Reputation score and pakt history</li>
-      </ul>
-
-      <p><strong>Screen Time data</strong></p>
-      <p>
-        App selection and usage monitoring are handled entirely on-device by Apple's Screen Time framework (Family Controls / ManagedSettings). We never receive raw app-usage data, screen-on times, or the content of anything you do on your device. The only event transmitted to our servers is a status update — for example "pakt broken" — when the system extension detects that a restricted app was opened.
-      </p>
-
-      <p><strong>Push notification token</strong></p>
-      <p>
-        If you grant notification permission, we store your APNs device token to deliver real-time pakt alerts (e.g., when a group member breaks a pakt or sends an invite).
-      </p>
-
-      <p><strong>Information we do NOT collect</strong></p>
-      <ul>
-        <li>Device location</li>
-        <li>Contacts or address book</li>
-        <li>Photos or camera</li>
-        <li>Advertising identifiers (IDFA)</li>
-        <li>Browsing history or in-app behavior analytics</li>
-      </ul>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 3 -->
-    <section>
-      <h3>3. How We Use Your Information</h3>
-      <ul>
-        <li>Provide, operate, and improve the Pakt app and its features</li>
-        <li>Authenticate your account and keep it secure</li>
-        <li>Display your activity on the social feed (only for public pakts you create)</li>
-        <li>Send push notifications about pakt events you have opted in to receive</li>
-        <li>Calculate reputation scores, streaks, and completion stats shown on your profile</li>
-        <li>Respond to support requests you send to us</li>
-      </ul>
-      <p>We do not use your data for advertising, profiling, or any purpose beyond operating the service.</p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 4 -->
-    <section>
-      <h3>4. Sharing Your Information</h3>
-      <p>We do not sell, rent, or trade your personal information. We share data only in these limited circumstances:</p>
-      <ul>
-        <li><strong>Other Pakt users</strong> — Your username, display name, reputation score, and public pakt activity are visible to other users as part of the core accountability feature. Private pakts are never shown on the public feed.</li>
-        <li><strong>Supabase</strong> — Our backend database and authentication provider. Data is stored in Supabase infrastructure. See <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.</li>
-        <li><strong>Apple</strong> — Screen Time monitoring runs through Apple's frameworks. App selection data stays on your device and is governed by Apple's privacy policy.</li>
-        <li><strong>Legal requirements</strong> — We may disclose information if required by law or to protect the rights and safety of our users.</li>
-      </ul>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 5 -->
-    <section>
-      <h3>5. Screen Time &amp; Family Controls</h3>
-      <p>
-        Pakt uses Apple's Family Controls entitlement to let you select apps you want to block during an active pakt. This permission is granted by you, is revocable at any time in iOS Settings, and governs only the specific apps you choose.
-      </p>
-      <p>
-        Monitoring happens inside iOS system extensions (Device Activity Monitor, Shield Action) that run independently of the Pakt app. These extensions do not transmit usage details — they only trigger a "pakt broken" status update when a restricted app is opened.
-      </p>
-      <p>
-        All app-selection data (which apps you chose to block) is stored locally in an App Group shared container and is never uploaded to our servers.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 6 -->
-    <section>
-      <h3>6. Data Retention</h3>
-      <p>
-        We retain your account data for as long as your account is active. Feed events and pakt records are kept to support your profile history and reputation score.
-      </p>
-      <p>
-        If you delete your account, all personally identifiable data (email, display name, username, push token) is permanently deleted. Anonymized aggregate statistics may be retained.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 7 -->
-    <section>
-      <h3>7. Your Rights &amp; Choices</h3>
-      <ul>
-        <li><strong>Access</strong> — You can view all data associated with your account in the app.</li>
-        <li><strong>Correction</strong> — You can update your display name and username in Profile settings.</li>
-        <li><strong>Deletion</strong> — You can delete your account from Profile settings. This permanently removes all your personal data.</li>
-        <li><strong>Notifications</strong> — You can disable push notifications at any time in iOS Settings → Pakt.</li>
-        <li><strong>Screen Time permission</strong> — You can revoke Family Controls access in iOS Settings → Screen Time at any time.</li>
-      </ul>
-      <p>
-        To exercise any right or for questions about your data, email <a href="mailto:privacy@pakt.app">privacy@pakt.app</a>.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 8 -->
-    <section>
-      <h3>8. Children's Privacy</h3>
-      <p>
-        Pakt is not directed at children under 13. We do not knowingly collect personal information from anyone under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 9 -->
-    <section>
-      <h3>9. Security</h3>
-      <p>
-        We use industry-standard measures to protect your data, including encrypted connections (HTTPS/TLS) for all data in transit and row-level security policies in our database so users can only access their own data.
-      </p>
-      <p>
-        No method of electronic storage is 100% secure. If you discover a security issue, please report it responsibly to <a href="mailto:privacy@pakt.app">privacy@pakt.app</a>.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 10 -->
-    <section>
-      <h3>10. Changes to This Policy</h3>
-      <p>
-        We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. For significant changes, we will notify you via an in-app message or email. Continued use of Pakt after changes are posted constitutes your acceptance of the updated policy.
-      </p>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- 11 -->
-    <section>
-      <h3>11. Contact Us</h3>
-      <p>
-        If you have any questions about this Privacy Policy or your data, contact us at:
-      </p>
-      <ul>
-        <li>Email: <a href="mailto:privacy@pakt.app">privacy@pakt.app</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2026 Pakt &nbsp;·&nbsp;
-    <a href="mailto:privacy@pakt.app">Contact</a>
-  </footer>
-
 </body>
 </html>
