@@ -1,4 +1,4 @@
-     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -339,7 +339,7 @@
                 </div>
                 <div class="meta-card">
                     <div class="meta-label">Contact</div>
-                    <div class="meta-value">kawwas.luke@gmail.com</div>
+                    <div class="meta-value">privacy@paktapp.com</div>
                 </div>
             </div>
         </section>
@@ -367,21 +367,25 @@
                     <h3>1.1 Information You Provide</h3>
                     <ul>
                         <li><strong>Account information:</strong> Email address, display name, and username when you create an account.</li>
-                        <li><strong>Profile content:</strong> Any updates you make to your display name or profile.</li>
+                        <li><strong>Optional phone number:</strong> If you choose to add a phone number during sign up, it is used to help match your contacts to existing Pakt users.</li>
+                        <li><strong>Profile content:</strong> Any updates you make to your display name, avatar, or profile.</li>
                     </ul>
 
                     <h3>1.2 Information Collected Automatically</h3>
                     <ul>
-                        <li><strong>Pakt activity:</strong> Pakts you create or join, their titles, duration, selected apps for blocking, start and end dates, and whether you completed or broke them.</li>
+                        <li><strong>Pakt activity:</strong> Solo pakts you create, their titles, duration, selected apps for blocking, start and end dates, and whether you completed or broke them.</li>
+                        <li><strong>Check-in history:</strong> Daily check-in records tied to your active pakts.</li>
                         <li><strong>Reputation and statistics:</strong> Computed scores based on your pakt history, including pakts completed, pakts broken, and success rate.</li>
+                        <li><strong>Feed events:</strong> Activity posted to the public feed when you start, complete, or break a public pakt.</li>
                         <li><strong>Device push token:</strong> A device identifier used to deliver push notifications about pakt activity.</li>
+                        <li><strong>Contacts matching data:</strong> If you grant Contacts permission, the app reads contact names and phone numbers on-device so it can identify which of your contacts already use Pakt. Matching phone numbers may be sent to our backend for this lookup.</li>
                         <li><strong>App usage via Screen Time:</strong> When you grant Screen Time permission, Pakt uses Apple's Family Controls framework to monitor whether you open apps you selected for restriction. Monitoring occurs on-device. Violation events are recorded locally and synced to Pakt servers to update pakt status and notify group members.</li>
                     </ul>
 
                     <h3>1.3 Information We Do Not Collect</h3>
                     <ul>
                         <li>We do not collect your location.</li>
-                        <li>We do not collect your contacts, messages, photos, or camera data.</li>
+                        <li>We do not collect your messages or camera data.</li>
                         <li>We do not use advertising identifiers or track you across other apps or websites.</li>
                         <li>We do not sell your data to third parties.</li>
                     </ul>
@@ -399,11 +403,15 @@
                         <tbody>
                             <tr>
                                 <td>Account creation and authentication</td>
-                                <td>Email, display name, username</td>
+                                <td>Email, display name, username, optional phone number</td>
                             </tr>
                             <tr>
                                 <td>Running pakt features</td>
                                 <td>App selection, pakt data, Screen Time events</td>
+                            </tr>
+                            <tr>
+                                <td>Matching your contacts to existing Pakt users</td>
+                                <td>Optional phone number, contact phone numbers, contact names</td>
                             </tr>
                             <tr>
                                 <td>Sending notifications</td>
@@ -434,7 +442,7 @@
                     <ul>
                         <li>Monitoring is limited to apps you select when creating a pakt.</li>
                         <li>The app detects when a restricted app is opened and records this as a pakt violation.</li>
-                        <li>Violation data is synced to our servers and shared with your pakt group members when applicable.</li>
+                        <li>Violation data is synced to our servers so your pakt status, reputation flow, and public feed can update.</li>
                         <li>You can revoke Screen Time permission at any time in iOS Settings. Revoking permission disables app blocking but does not automatically delete existing pakt data.</li>
                     </ul>
                 </section>
@@ -445,8 +453,8 @@
 
                     <h3>4.1 With Other Users</h3>
                     <ul>
-                        <li>Your username and display name are visible to other users in group pakts and on the public feed.</li>
-                        <li>Pakt activity such as started, completed, or broken events is visible to pakt group members and, for public pakts, to all users of the app.</li>
+                        <li>Your username and display name may be shown to other users when they search for existing Pakt users or when your public profile and feed activity are visible in the app.</li>
+                        <li>Pakt activity such as started, completed, or broken events may be visible to all users of the app when the related pakt is public.</li>
                         <li>Your reputation score and related statistics are visible on your profile.</li>
                     </ul>
 
@@ -481,7 +489,7 @@
                             </tr>
                             <tr>
                                 <td>Feed events</td>
-                                <td>Until you delete your account or request removal</td>
+                                <td>Until you delete your account</td>
                             </tr>
                             <tr>
                                 <td>Push tokens</td>
@@ -490,6 +498,10 @@
                             <tr>
                                 <td>Screen Time violation records</td>
                                 <td>Until you delete your account</td>
+                            </tr>
+                            <tr>
+                                <td>Optional phone number and contact-matching data</td>
+                                <td>Until you delete your account or revoke access, subject to operational retention needs</td>
                             </tr>
                         </tbody>
                     </table>
@@ -533,8 +545,7 @@
                     <h2>10. Contact Us</h2>
                     <p>If you have questions about this Privacy Policy or want to exercise your data rights, contact:</p>
                     <div class="callout">
-                        privacy@paktapp.com<br>
-                        Replace this email before publishing if your live support address is different.
+                        kawwas.luke@gmail.com
                     </div>
                 </section>
             </main>
